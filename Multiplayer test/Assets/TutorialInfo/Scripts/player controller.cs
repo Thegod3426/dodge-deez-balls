@@ -5,6 +5,7 @@ public class playercontroller : MonoBehaviour
 {
     public float speed = 5.0f;
     public float turnSpeed;
+    public float rotatesp;
     private float horizontalInput; 
     private float verticalInput;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -19,8 +20,8 @@ public class playercontroller : MonoBehaviour
          horizontalInput = Input.GetAxis("Horizontal");
          verticalInput = Input.GetAxis("Vertical");
 
-        transform.Translate(Vector3.right * speed * horizontalInput * Time.deltaTime);
+        
         transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
-        transform.Rotate(Vector3.up * speed * horizontalInput * Time.deltaTime);
+        transform.Rotate(Vector3.up * rotatesp * horizontalInput * Time.deltaTime);
     }
 }
