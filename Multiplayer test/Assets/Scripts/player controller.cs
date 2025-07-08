@@ -9,7 +9,7 @@ public class playercontroller : MonoBehaviour
     public float rotatesp=200.0f;
     private float horizontalInput; 
     private float verticalInput;
-    private float jumpForce = 300.0f;
+    public float jumpForce = 300.0f;
     public bool isOnGround = true;
     public Rigidbody playerRb;
    
@@ -29,8 +29,8 @@ public class playercontroller : MonoBehaviour
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
 
-
-        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+        
+        //transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
 
         transform.Rotate(Vector3.up * speed * horizontalInput * Time.deltaTime);
         transform.Rotate(Vector3.up * rotatesp * horizontalInput * Time.deltaTime);
@@ -41,6 +41,8 @@ public class playercontroller : MonoBehaviour
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
+
+        playerRb.linearVelocity = ((verticalInput * speed) * transform.forward) + ((horizontalInput * speed) * transform.right);
     }
 
        private void OnCollisionEnter(Collision collision)
