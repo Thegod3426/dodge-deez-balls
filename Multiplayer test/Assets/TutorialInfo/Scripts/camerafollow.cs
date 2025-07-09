@@ -2,18 +2,19 @@ using UnityEngine;
 
 public class camerafollow : MonoBehaviour
 {
-    public GameObject player;
+    public Transform player;
+
    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private void Start()
     {
-     
+        player = transform.parent;
     }
 
     // Update is called once per frame
-    private void Update()
+    public void Update()
     {
-        transform.position = player.transform.position+new Vector3(0,3,0);
-         transform.rotation = player.transform.rotation;
+        transform.position = player.position+new Vector3(0,3,0);
+         transform.rotation = player.rotation;
     }
 }

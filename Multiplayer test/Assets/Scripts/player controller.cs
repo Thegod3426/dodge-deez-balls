@@ -12,8 +12,6 @@ public class playercontroller : MonoBehaviour
     public float jumpForce = 300.0f;
     public bool isOnGround = true;
     public Rigidbody playerRb;
-    private Vector3 offset;
-    private float zCoord;
 
 
 
