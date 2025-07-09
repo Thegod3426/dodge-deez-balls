@@ -1,12 +1,15 @@
+using System.Drawing;
+using Unity.Netcode;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class DragObject : MonoBehaviour
+public class GameObject : MonoBehaviour
 {
     private Rigidbody rb;
-    private bool draging = false;
+    private bool draging = false;//origion false
     private Vector3 offset;
     private float zCoord;
+    private Camera cam;
 
     private void Start()
     {
@@ -24,7 +27,7 @@ public class DragObject : MonoBehaviour
     {
         if (draging)
         {
-            Vector3 targetPos = GetMouseWorldPosition() + offset;
+            Vector3 targetPos = GetMouseWorldPosition();
             rb.MovePosition(targetPos);
         }
     }
@@ -45,14 +48,16 @@ public class DragObject : MonoBehaviour
 
     
 
-    private void OnMouseDrag()
-    {
-        transform.position = GetMouseWorldPosition() + offset;
+    //public void OnMouseDrag()
+    //{
+        //was private
+        //Vector3 mousePos= Input.mousePosition;
+        //Vector3 point = new Vector3();
+        //transform.position = GetMouseWorldPosition();//offset was here
+        //Vector3.Normalize(offset);
+        //point = cam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, cam.nearClipPlane));
+       
     }
-
    
+//}
 
-    
-
-
-}
