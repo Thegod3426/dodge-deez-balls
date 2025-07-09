@@ -14,6 +14,6 @@ public class camerafollow : MonoBehaviour
     private void Update()
     {
         transform.position = player.transform.position+new Vector3(0,3,0);
-     transform.rotation = player.transform.rotation;
+         transform.rotation = player.transform.rotation;
     }
 }
