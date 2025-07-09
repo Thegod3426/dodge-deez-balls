@@ -28,6 +28,7 @@ public class DragObject : MonoBehaviour
 
         mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
 
+
     }
 
 
@@ -60,7 +61,7 @@ public class DragObject : MonoBehaviour
 
     {
 
-        transform.position = GetMouseAsWorldPoint() + mOffset;
+        transform.position = GetMouseAsWorldPoint()+ mOffset;
 
     }
 
