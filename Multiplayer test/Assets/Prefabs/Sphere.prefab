@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 109578934624794434}
   - component: {fileID: 3008201309165041171}
   - component: {fileID: 2801445913422141582}
-  - component: {fileID: 7680763612623818807}
+  - component: {fileID: 2990293770804908743}
+  - component: {fileID: 33202026306363375}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -96,7 +97,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554481109692950915}
-  m_Material: {fileID: 13400000, guid: 348889ab16b5f22498f2d3f9f29e8ed4, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -106,7 +107,7 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
@@ -137,7 +138,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &7680763612623818807
+--- !u!114 &2990293770804908743
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,8 +147,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 554481109692950915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcf41f6a88076ef40a680e684b11782a, type: 3}
+  m_Script: {fileID: 11500000, guid: 67b27c02a95dfa845a51f32a239bb870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BRB: {fileID: 2801445913422141582}
-  speed: 1
+--- !u!64 &33202026306363375
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554481109692950915}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
