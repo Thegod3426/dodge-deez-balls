@@ -2,16 +2,17 @@ using System;
 using System.Collections.Generic;
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
-public class DragObject : MonoBehaviour
+public class demo : MonoBehaviour
 
 {
     public Transform armx2;
     private Vector3 mOffset;
     public float Speed;
-    public bool ballcheck=false; 
+    public bool ballcheck=true; 
 
 
 
@@ -79,7 +80,10 @@ public class DragObject : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-       Destroy(gameObject);  
-       Destroy(other);
+        if (other.tag=="Player")
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene("StartGame");
+        }
     }
 }

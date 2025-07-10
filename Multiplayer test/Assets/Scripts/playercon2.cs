@@ -29,5 +29,7 @@ public class playercon2 : MonoBehaviour
             p2RB.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
             IsOnGround = false;
         }
+        
+        
     }
 }
