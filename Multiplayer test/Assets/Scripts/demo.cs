@@ -11,7 +11,7 @@ public class DragObject : MonoBehaviour
     public Transform armx2;
     private Vector3 mOffset;
     public float Speed;
-    public bool ballcheck=false; 
+    public bool ballcheck=true; 
 
 
 
@@ -77,9 +77,9 @@ public class DragObject : MonoBehaviour
         }
         
     }
-    public void OnTriggerEnter(Collider other)
-    {
-       Destroy(gameObject);  
-       Destroy(other);
-    }
+    //public void OnTriggerEnter(Collider other)
+   // {
+      // Destroy(gameObject);  
+       //Destroy(other);
+    //}
 }
